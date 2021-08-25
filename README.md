@@ -23,16 +23,16 @@
 
 #### Data Structures
 -   User Doc
-<img src="./readme_pictures/firebase_user_collection.PNG">
+<img src="./stripe_marketplace/readme_pictures/firebase_user_collection.PNG">
 
 -   User Cart
-<img src="./readme_pictures/firebase_cart_collection.PNG">
+<img src="./stripe_marketplace/readme_pictures/firebase_cart_collection.PNG">
 
 -   User History Doc
-<img src="./readme_pictures/firebase_user_collection.PNG">
+<img src="./stripe_marketplace/readme_pictures/firebase_user_collection.PNG">
 
 -   Product Doc
-<img src="./readme_pictures/firebase_product_collection.PNG">
+<img src="./stripe_marketplace/readme_pictures/firebase_product_collection.PNG">
 
 
 ### Cloud Function
@@ -74,7 +74,7 @@ firebase functions:config:set stripe.test_pk="YOUR_TEST_PRIVATE_KEY" stripe.test
 
 ### Payout
 -   For now only US stripe accounts can use instant payout.
-<img src="./readme_pictures/no_instant payout.PNG">
+<img src="./stripe_marketplace/readme_pictures/no_instant payout.PNG">
 
 ### Frontend
 -   Hopefully by now you have setup your flutter app with your firebase account.
