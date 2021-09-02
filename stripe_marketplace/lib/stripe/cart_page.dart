@@ -79,7 +79,7 @@ class _CartPageState extends State<CartPage> {
 
     // String uidPayment = "4oHYQE3z3b7WeEgjh8u7";
     String stripeAccountId = widget.accountID ?? "acct_1IhUiS2RGp15zJDq";
-    String productReference = widget.product ?? "";
+    String productReference = "/Product/${widget.product.id}" ?? "";
     Map paymentMethodMap = {
       "paymentmethod": {
         "type": "card",
