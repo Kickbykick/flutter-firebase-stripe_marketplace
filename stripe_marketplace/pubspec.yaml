@@ -33,6 +33,7 @@ dependencies:
   firebase_auth_web:
   firebase_core:
   firebase_dynamic_links: ^2.0.7
+  flutter_credit_card: ^2.0.0
   intl:
   charts_flutter:
   google_sign_in: ^4.5.6
