@@ -3,6 +3,7 @@
 -   **Step By Step Video WIP**
 
 ### This app might have bugs and edge cases, make sure you read the code and understand how it works before you use.
+### Code was tested on Flutter 2.2
 
 ##### TODO
 -   Switch plugin to the new [flutter stripe plugin](https://pub.dev/packages/flutter_stripe)
