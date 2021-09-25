@@ -28,6 +28,7 @@ class _CartPageState extends State<CartPage> {
   double tip = 1.0;
   double tax = 0.0;
   double extraAmount = 0.0;
+  String productReference = "";
 
   double taxPercent = 0.2;
   int amount = 0;
@@ -43,6 +44,7 @@ class _CartPageState extends State<CartPage> {
         androidPayMode: 'test',
       ),
     );
+    productReference = "/Product/${widget.product.id}" ?? "";
   }
 
   Future<void> createPaymentMethod(CreditCardModel creditCardModel) async {
@@ -78,7 +80,7 @@ class _CartPageState extends State<CartPage> {
 
     // String uidPayment = "4oHYQE3z3b7WeEgjh8u7";
     String stripeAccountId = widget.accountID ?? "acct_1IhUiS2RGp15zJDq";
-    String productReference = "/Product/${widget.product.id}" ?? "";
+    productReference = "/Product/${widget.product.id}" ?? "";
     print(stripeAccountId);
 
     try {
@@ -201,6 +203,17 @@ class _CartPageState extends State<CartPage> {
                                 ).then((creditCartModel) async {
                                   if (creditCartModel is CreditCardModel) {
                                     await createPaymentMethod(creditCartModel);
+                                    await DatabaseService(
+                                            uid: Provider.of<User>(context,
+                                                    listen: false)
+                                                .uid)
+                                        .createHistoryDocumentForUser(
+                                            productReference,
+                                            totalCost,
+                                            tax,
+                                            extraAmount,
+                                            tip,
+                                            widget.product.sellerid);
                                   }
                                 });
                               },
